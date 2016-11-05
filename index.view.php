@@ -17,11 +17,17 @@
 </head>
 <body>
     <header>
-        <?= 'Hello!!!' ?>
+        <?= 'Użytkownicy' ?>
     </header>
     <ul>
-        <?php foreach($animals as $animal): ?>
-        <li><?= $animal ?></li>
+        <?php foreach($users as $user): ?>
+        <li>
+            <?php if($user->verified) : ?>
+                <span style="color: green"><?= $user->login ?></span>
+            <?php else : ?>
+                <span style="color: red"><?= $user->login ?></span>
+            <?php endif ?>
+        </li>
         <?php endforeach; ?>
     </ul>
 </body>

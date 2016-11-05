@@ -1,11 +1,7 @@
 <?php
 
-$animals = [
-    'lion',
-    'giraffe',
-    'elephant',
-    'monkey',
-    'dolphin'
-];
+$query = require 'bootstrap.php';
+
+$users = $query -> selectAll('users');
 
 require 'index.view.php';
